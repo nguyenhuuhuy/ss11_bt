@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        appearance: auto;
+        cursor: default;
+        color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+        padding: initial;
+        border: initial;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="range" onclick="changeGood()" min="0" max="5" id="good" />
+    <input type="range" onclick="changeCheap()" min="0" max="5" id="cheap" />
+    <input type="range" onclick="changeFast()" min="0" max="5" id="fast" />
+    <script>
+      let good = false;
+      let cheap = false;
+      let fast = false;
+      function changeGood() {
+        good = !good;
+        if (good) {
+          document.getElementById("good").value = 5;
+          if (cheap && fast) {
+            document.getElementById("fast").value = 0;
+            fast = false;
+          }
+        } else {
+          document.getElementById("good").value = 0;
+        }
+        console.log("good = ", good);
+      }
+
+      function changeCheap() {
+        cheap = !cheap;
+        if (cheap) {
+          Document.getElementById("cheap").value = 5;
+          if (good && fast) {
+            document.getElementById("good").value = 0;
+            good = false;
+          }
+        } else {
+          document.getElementById("cheap").value = 0;
+        }
+        console.log("cheap =", cheap);
+      }
+
+      function changeFast() {
+        fast = !fast;
+        console.log("fasst --->", fast);
+        if (fast) {
+          Document.getElementById("fast").value = 5;
+          if (good && cheap) {
+            document.getElementById("good").value = 0;
+            good = false;
+          }
+        } else {
+          document.getElementById("fast").value = 0;
+        }
+        // console.log('good =', fast)
+      }
+    </script>
+  </body>
+</html>

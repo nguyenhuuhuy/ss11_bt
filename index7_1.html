@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>so a</th>
+            <th>so b</th>
+            <th>ket qua</th>
+        </tr>
+        <tr>
+            <td id="so1"></td>
+            <td id="so2"></td>
+            <td id="kq"></td>
+        </tr>
+    </table>
+    <p><button onclick="myFunction()">Click</button></p>
+    <script>
+        function myFunction(){
+            let x = prompt('nhap so a')
+            let y = prompt('chap so b')
+            document.getElementById('so1').innerHTML = x;
+            document.getElementById('so2').innerHTML = y;
+            x1 = parseInt(x);
+            y2 = parseInt(y);
+            let z = x1 / y2;
+            if(x1/y2 == 0){
+                document.getElementById('kq').innerHTML = 'a chia het cho b'; 
+            } else{
+                document.getElementById('kq').innerHTML = 'a ko chia het cho b';
+            }
+        }
+    </script>
+</body>
+</html>

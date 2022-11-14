@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Ten</th>
+            <th>giua ky</th>
+            <th>cuoi ky</th>
+            <th>hoc luc</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Long</td>
+            <td id="gk"></td>
+            <td id="ck"></td>
+            <td id="hl"></td>
+        </tr>
+        <p><button onclick="myFunction()">click</button></p>
+    </table>
+    <script>
+        function myFunction(){
+            let x = parseInt(prompt('nhap diem giua ky:'))
+            let y = parseInt(prompt('nhap diem cuoi ky:'))
+            document.getElementById('gk').innerHTML = x;
+            document.getElementById('ck').innerHTML = y;
+            let z = (x + (y * 2)) / 3;
+            if (z > 8) {
+                document.getElementById('hl').innerHTML = "G";
+            } else {
+                if (z >= 5) {
+                    document.getElementById('hl').innerHTML = 'tb';
+                } else {
+                    document.getElementById('hl').innerHTML = 'y';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

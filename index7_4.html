@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>so thu nhat</th>
+        <th>so thu hai</th>
+        <th>so thu ba</th>
+        <th>ket qua</th>
+      </tr>
+      <tr>
+        <td id="st1"></td>
+        <td id="st2"></td>
+        <td id="st3"></td>
+        <td id="kq"></td>
+      </tr>
+    </table>
+    <p><button onclick="myFunction()">Click</button></p>
+    <script>
+      function myFunction() {
+        let a = prompt("nhap gia tri x:");
+        let b = prompt("nhap gia tri b;");
+        let c = prompt("nhap gia tri c:");
+        a1 = parseInt(a);
+        b1 = parseInt(b);
+        c1 = parseInt(c);
+        if (a1 > b1) {
+          if (a1 > c1) {
+            document.getElementById("kq").innerHTML = a1 + "max";
+          } else {
+            document.getElementById("kq").innerHTML = c1 + "max";
+          }
+        } else {
+          if (b1 > c1) {
+            document.getElementById("kq").innerHTML = b1 + "max";
+          } else {
+            document.getElementById("kq").innerHTML = c1 + "max";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
